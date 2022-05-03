@@ -2,16 +2,17 @@ package github.grovre.mutables;
 
 import github.grovre.Mutable;
 import github.grovre.interfaces.AsAtomic;
-import github.grovre.interfaces.BigDecimalCapable;
+import github.grovre.interfaces.AsBigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Synchronized;
 
 import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
 @AllArgsConstructor
-public class MutableByte extends Mutable implements BigDecimalCapable, AsAtomic {
+public class MutableByte extends Mutable implements AsBigDecimal, AsAtomic {
 
     private byte byte_;
 
@@ -23,5 +24,10 @@ public class MutableByte extends Mutable implements BigDecimalCapable, AsAtomic 
     @Override
     public AtomicInteger asAtomic() {
         return new AtomicInteger(this.byte_);
+    }
+
+    @Synchronized
+    public void setConcurrently(byte v) {
+        this.byte_ = v;
     }
 }
