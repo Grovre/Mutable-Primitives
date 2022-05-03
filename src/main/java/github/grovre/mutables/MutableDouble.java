@@ -14,16 +14,29 @@ public class MutableDouble extends Mutable implements BigDecimalCapable {
 
     private double double_;
 
+    /**
+     * Creates a BigDecimal object out of the contained double
+     * from this MutableDouble
+     * @return new BigDecimal from contained double
+     */
     @Override
     public BigDecimal asBigDecimal() {
         return new BigDecimal(this.double_);
     }
 
+    /**
+     * A threadsafe setter for the contained double
+     * @param v The replacing double
+     */
     @Synchronized
     public void setConcurrently(double v) {
         this.double_ = v;
     }
 
+    /**
+     * Generates a random double inside of a new MutableDouble
+     * @return new MutableDouble with random double
+     */
     @Override
     public MutableDouble random() {
         double randomDouble = random.nextDouble();
