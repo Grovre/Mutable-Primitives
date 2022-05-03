@@ -29,4 +29,10 @@ public class MutableBoolean extends Mutable implements AsNumber, AsAtomic {
     public void setConcurrently(boolean v) {
         this.boolean_ = v;
     }
+
+    @Override
+    public MutableBoolean random() {
+        boolean randomBoolean = random.nextBoolean();
+        return new MutableBoolean(randomBoolean);
+    }
 }

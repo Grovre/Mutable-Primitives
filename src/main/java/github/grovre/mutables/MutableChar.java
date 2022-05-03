@@ -21,4 +21,10 @@ public class MutableChar extends Mutable implements AsNumber {
     public void setConcurrently(char v) {
         this.char_ = v;
     }
+
+    @Override
+    public MutableChar random() {
+        char randomChar = (char) random.nextInt(200);
+        return new MutableChar(randomChar);
+    }
 }

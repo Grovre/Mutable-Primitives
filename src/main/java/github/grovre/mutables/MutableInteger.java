@@ -30,4 +30,10 @@ public class MutableInteger extends Mutable implements AsBigDecimal, AsAtomic {
     public void setConcurrently(int v) {
         this.int_ = v;
     }
+
+    @Override
+    public MutableInteger random() {
+        int randomInt = random.nextInt();
+        return new MutableInteger(randomInt);
+    }
 }

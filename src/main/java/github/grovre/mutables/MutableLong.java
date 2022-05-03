@@ -30,4 +30,10 @@ public class MutableLong extends Mutable implements AsBigDecimal, AsAtomic {
     public void setConcurrently(long v) {
         this.long_ = v;
     }
+
+    @Override
+    public MutableLong random() {
+        long randomLong = random.nextLong();
+        return new MutableLong(randomLong);
+    }
 }

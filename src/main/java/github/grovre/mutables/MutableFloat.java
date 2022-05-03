@@ -23,4 +23,10 @@ public class MutableFloat extends Mutable implements AsBigDecimal {
     public void setConcurrently(float v) {
         this.float_ = v;
     }
+
+    @Override
+    public MutableFloat random() {
+        float randomFloat = random.nextFloat();
+        return new MutableFloat(randomFloat);
+    }
 }

@@ -30,4 +30,10 @@ public class MutableByte extends Mutable implements AsBigDecimal, AsAtomic {
     public void setConcurrently(byte v) {
         this.byte_ = v;
     }
+
+    @Override
+    public MutableByte random() {
+        byte randomByte = (byte) random.nextInt();
+        return new MutableByte(randomByte);
+    }
 }

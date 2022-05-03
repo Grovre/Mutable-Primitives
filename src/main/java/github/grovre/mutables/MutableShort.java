@@ -30,4 +30,10 @@ public class MutableShort extends Mutable implements AsBigDecimal, AsAtomic {
     public void setConcurrently(short v) {
         this.short_ = v;
     }
+
+    @Override
+    public MutableShort random() {
+        short randomShort = (short) random.nextInt();
+        return new MutableShort(randomShort);
+    }
 }

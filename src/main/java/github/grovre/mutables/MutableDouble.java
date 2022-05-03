@@ -23,4 +23,10 @@ public class MutableDouble extends Mutable implements AsBigDecimal {
     public void setConcurrently(double v) {
         this.double_ = v;
     }
+
+    @Override
+    public MutableDouble random() {
+        double randomDouble = random.nextDouble();
+        return new MutableDouble(randomDouble);
+    }
 }
