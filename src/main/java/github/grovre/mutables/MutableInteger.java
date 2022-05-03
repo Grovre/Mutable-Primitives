@@ -1,8 +1,8 @@
 package github.grovre.mutables;
 
 import github.grovre.Mutable;
-import github.grovre.interfaces.AsAtomic;
-import github.grovre.interfaces.AsBigDecimal;
+import github.grovre.interfaces.AtomicCapable;
+import github.grovre.interfaces.BigDecimalCapable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Synchronized;
@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
 @AllArgsConstructor
-public class MutableInteger extends Mutable implements AsBigDecimal, AsAtomic {
+public class MutableInteger extends Mutable implements BigDecimalCapable, AtomicCapable {
 
     private int int_;
 

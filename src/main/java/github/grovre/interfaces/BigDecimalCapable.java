@@ -2,7 +2,7 @@ package github.grovre.interfaces;
 
 import java.math.BigDecimal;
 
-public interface AsBigDecimal {
+public interface BigDecimalCapable {
 
     BigDecimal asBigDecimal();
 }

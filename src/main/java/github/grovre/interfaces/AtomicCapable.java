@@ -1,6 +1,6 @@
 package github.grovre.interfaces;
 
-public interface AsAtomic {
+public interface AtomicCapable {
 
     Object asAtomic();
 }

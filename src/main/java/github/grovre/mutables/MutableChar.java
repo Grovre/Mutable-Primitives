@@ -1,14 +1,14 @@
 package github.grovre.mutables;
 
 import github.grovre.Mutable;
-import github.grovre.interfaces.AsNumber;
+import github.grovre.interfaces.NumberCapable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Synchronized;
 
 @Data
 @AllArgsConstructor
-public class MutableChar extends Mutable implements AsNumber {
+public class MutableChar extends Mutable implements NumberCapable {
 
     private char char_;
 

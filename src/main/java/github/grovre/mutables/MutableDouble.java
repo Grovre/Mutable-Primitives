@@ -1,7 +1,7 @@
 package github.grovre.mutables;
 
 import github.grovre.Mutable;
-import github.grovre.interfaces.AsBigDecimal;
+import github.grovre.interfaces.BigDecimalCapable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Synchronized;
@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
-public class MutableDouble extends Mutable implements AsBigDecimal {
+public class MutableDouble extends Mutable implements BigDecimalCapable {
 
     private double double_;
 

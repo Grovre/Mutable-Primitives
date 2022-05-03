@@ -1,8 +1,8 @@
 package github.grovre.mutables;
 
 import github.grovre.Mutable;
-import github.grovre.interfaces.AsAtomic;
-import github.grovre.interfaces.AsNumber;
+import github.grovre.interfaces.AtomicCapable;
+import github.grovre.interfaces.NumberCapable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Synchronized;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 @Data
 @AllArgsConstructor
-public class MutableBoolean extends Mutable implements AsNumber, AsAtomic {
+public class MutableBoolean extends Mutable implements NumberCapable, AtomicCapable {
 
     private boolean boolean_;
 

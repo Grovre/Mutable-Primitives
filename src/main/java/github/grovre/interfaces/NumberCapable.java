@@ -1,6 +1,6 @@
 package github.grovre.interfaces;
 
-public interface AsNumber {
+public interface NumberCapable {
 
     int asNumber();
 }
