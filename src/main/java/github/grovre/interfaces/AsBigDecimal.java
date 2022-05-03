@@ -4,5 +4,5 @@ import java.math.BigDecimal;
 
 public interface AsBigDecimal {
 
-    BigDecimal getAsBigDecimal();
+    BigDecimal asBigDecimal();
 }

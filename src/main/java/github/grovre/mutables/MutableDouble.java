@@ -15,7 +15,7 @@ public class MutableDouble extends Mutable implements AsBigDecimal {
     private double double_;
 
     @Override
-    public BigDecimal getAsBigDecimal() {
+    public BigDecimal asBigDecimal() {
         return new BigDecimal(this.double_);
     }
 

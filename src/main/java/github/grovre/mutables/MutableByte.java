@@ -17,7 +17,7 @@ public class MutableByte extends Mutable implements AsBigDecimal, AsAtomic {
     private byte byte_;
 
     @Override
-    public BigDecimal getAsBigDecimal() {
+    public BigDecimal asBigDecimal() {
         return new BigDecimal(this.byte_);
     }
 

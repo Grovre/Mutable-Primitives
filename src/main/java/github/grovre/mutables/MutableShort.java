@@ -17,7 +17,7 @@ public class MutableShort extends Mutable implements AsBigDecimal, AsAtomic {
     private short short_;
 
     @Override
-    public BigDecimal getAsBigDecimal() {
+    public BigDecimal asBigDecimal() {
         return new BigDecimal(this.short_);
     }
 

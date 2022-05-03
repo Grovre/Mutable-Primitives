@@ -15,7 +15,7 @@ public class MutableFloat extends Mutable implements AsBigDecimal {
     private float float_;
 
     @Override
-    public BigDecimal getAsBigDecimal() {
+    public BigDecimal asBigDecimal() {
         return new BigDecimal(this.float_);
     }
 

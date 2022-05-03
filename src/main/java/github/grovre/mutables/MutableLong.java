@@ -17,7 +17,7 @@ public class MutableLong extends Mutable implements AsBigDecimal, AsAtomic {
     private long long_;
 
     @Override
-    public BigDecimal getAsBigDecimal() {
+    public BigDecimal asBigDecimal() {
         return new BigDecimal(this.long_);
     }
 
