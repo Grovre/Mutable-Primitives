@@ -13,7 +13,7 @@ public interface NumberCapable {
     /**
      * The abstract method to be implemented depending
      * on the type of the Mutable it is constructed for.
-     * @return
+     * @return The number representation of the type
      */
     int asNumber();
 }
