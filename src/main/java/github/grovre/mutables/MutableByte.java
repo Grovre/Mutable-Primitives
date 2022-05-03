@@ -20,6 +20,7 @@ public class MutableByte extends Mutable implements BigDecimalCapable, AsAtomic 
         return new BigDecimal(this.byte_);
     }
 
+    @Override
     public AtomicInteger asAtomic() {
         return new AtomicInteger(this.byte_);
     }

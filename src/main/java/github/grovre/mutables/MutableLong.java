@@ -20,6 +20,7 @@ public class MutableLong extends Mutable implements BigDecimalCapable, AsAtomic 
         return new BigDecimal(this.long_);
     }
 
+    @Override
     public AtomicLong asAtomic() {
         return new AtomicLong(this.long_);
     }

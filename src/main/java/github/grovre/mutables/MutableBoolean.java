@@ -19,6 +19,7 @@ public class MutableBoolean extends Mutable implements AsNumber, AsAtomic {
         return this.boolean_ ? 1 : 0;
     }
 
+    @Override
     public AtomicBoolean asAtomic() {
         return new AtomicBoolean(this.boolean_);
     }

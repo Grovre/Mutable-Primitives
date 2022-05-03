@@ -21,6 +21,7 @@ public class MutableInteger extends Mutable implements BigDecimalCapable, AsAtom
         return new BigDecimal(this.int_);
     }
 
+    @Override
     public AtomicInteger asAtomic() {
         return new AtomicInteger(this.int_);
     }

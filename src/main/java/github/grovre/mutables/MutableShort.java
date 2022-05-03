@@ -20,6 +20,7 @@ public class MutableShort extends Mutable implements BigDecimalCapable, AsAtomic
         return new BigDecimal(this.short_);
     }
 
+    @Override
     public AtomicInteger asAtomic() {
         return new AtomicInteger(this.short_);
     }
