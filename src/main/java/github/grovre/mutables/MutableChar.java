@@ -1,6 +1,7 @@
 package github.grovre.mutables;
 
 import github.grovre.Mutable;
+import github.grovre.interfaces.BoolCaster;
 import github.grovre.interfaces.NumberCapable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +9,7 @@ import lombok.Synchronized;
 
 @Data
 @AllArgsConstructor
-public class MutableChar extends Mutable implements NumberCapable {
+public class MutableChar extends Mutable implements NumberCapable, BoolCaster {
 
     private char char_;
 
@@ -40,5 +41,10 @@ public class MutableChar extends Mutable implements NumberCapable {
     public MutableChar random() {
         char randomChar = (char) random.nextInt(200);
         return new MutableChar(randomChar);
+    }
+
+    @Override
+    public boolean bool() {
+        return (int) this.char_ != 0;
     }
 }

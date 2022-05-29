@@ -3,6 +3,7 @@ package github.grovre.mutables;
 import github.grovre.Mutable;
 import github.grovre.interfaces.AtomicCapable;
 import github.grovre.interfaces.BigDecimalCapable;
+import github.grovre.interfaces.BoolCaster;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Synchronized;
@@ -12,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
 @AllArgsConstructor
-public class MutableShort extends Mutable implements BigDecimalCapable, AtomicCapable {
+public class MutableShort extends Mutable implements BigDecimalCapable, AtomicCapable, BoolCaster {
 
     private short short_;
 
@@ -56,5 +57,10 @@ public class MutableShort extends Mutable implements BigDecimalCapable, AtomicCa
     public MutableShort random() {
         short randomShort = (short) random.nextInt();
         return new MutableShort(randomShort);
+    }
+
+    @Override
+    public boolean bool() {
+        return this.short_ != 0;
     }
 }

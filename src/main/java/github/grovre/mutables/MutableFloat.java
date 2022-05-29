@@ -2,6 +2,7 @@ package github.grovre.mutables;
 
 import github.grovre.Mutable;
 import github.grovre.interfaces.BigDecimalCapable;
+import github.grovre.interfaces.BoolCaster;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Synchronized;
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
-public class MutableFloat extends Mutable implements BigDecimalCapable {
+public class MutableFloat extends Mutable implements BigDecimalCapable, BoolCaster {
 
     private float float_;
 
@@ -41,5 +42,10 @@ public class MutableFloat extends Mutable implements BigDecimalCapable {
     public MutableFloat random() {
         float randomFloat = random.nextFloat();
         return new MutableFloat(randomFloat);
+    }
+
+    @Override
+    public boolean bool() {
+        return this.float_ != 0;
     }
 }
