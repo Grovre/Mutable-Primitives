@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Mutable-Primitives:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Mutable_Primitives_jar</output-path>
+    <root id="archive" name="Mutable-Primitives.jar">
+      <element id="module-output" name="Mutable-Primitives" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
